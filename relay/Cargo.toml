@@ -1,0 +1,46 @@
+[package]
+name = "ech-db-relay"
+version.workspace = true
+edition.workspace = true
+
+[[bin]]
+name = "ech-db-relay"
+path = "src/main.rs"
+
+[dependencies]
+ech-db-protocol.workspace = true
+ech-db-entity.workspace = true
+ech-db-client.workspace = true
+forum-model = { path = "../forum-model" }
+bcs.workspace = true
+serde.workspace = true
+serde_json = "1"
+tokio = { workspace = true, features = ["fs"] }
+thiserror.workspace = true
+clap.workspace = true
+hex.workspace = true
+bytes.workspace = true
+futures.workspace = true
+rand.workspace = true
+ed25519-dalek.workspace = true
+blake2b_simd.workspace = true
+toml.workspace = true
+aws-sdk-s3.workspace = true
+aws-credential-types.workspace = true
+axum = { version = "0.8", features = ["multipart"] }
+tower-http = { version = "0.6", features = ["cors"] }
+reqwest = { version = "0.12", default-features = false, features = ["rustls-tls", "json", "stream"] }
+fred = { version = "10.1", features = ["enable-rustls", "subscriber-client", "i-scripts"] }
+moka = { version = "0.12", features = ["sync"] }
+hmac = "0.12"
+sha2 = "0.10"
+sha1 = "0.10"
+aes-gcm = "0.10"
+base64.workspace = true
+pwhash = "1"
+image = { version = "0.25", default-features = false, features = ["jpeg", "png", "webp", "gif"] }
+maxminddb = "0.30"
+iso3166 = "1"
+encoding_rs = "0.8"
+tempfile = "3"
+tokio-util = { version = "0.7", features = ["io"] }

@@ -1,0 +1,13 @@
+[package]
+name = "forum-program"
+version.workspace = true
+edition.workspace = true
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+forum-model = { path = "../forum-model" }
+ech-db-entity.workspace = true
+bcs.workspace = true
+serde.workspace = true
